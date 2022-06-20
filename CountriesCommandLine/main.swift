@@ -213,33 +213,17 @@ Zimbabwe
 
 let allCountries:[String] = allCountriesString.split(separator: "\n").map { String($0) }
 
-//print(allCountries)
-//  { substring in  return String(substring)
-//}
-
-//splitting string
-
-
-// an array that has countrys that match
-
-
-
-
-                                            // input array of countries
-                                            // inners of func do vowels
-                                            // return countries
 func countryBeginningAndEndingWithAVowel(countries: [String]) {
     var countriesWithVowels: [String] = []
     let vowels: [Character] = ["a","e","i","o","u"]
  
-    
     for country in countries {
 
-        let lowerCountry = country.lowercased()
-        let firstChar = lowerCountry.first  ?? "-"
-        let lastChar =  lowerCountry.last   ?? "-"
-
-        if  vowels.contains(firstChar) && vowels.contains(lastChar)  {
+        let lowerCaseCountry = country.lowercased()
+        let firstChar = lowerCaseCountry.first  ?? "-"
+        let lastChar =  lowerCaseCountry.last   ?? "-"
+        
+        if vowels.contains(firstChar) && vowels.contains(lastChar)  {
             countriesWithVowels.append(country)
         }
     
@@ -273,9 +257,7 @@ func countryWithLotsOfVowels(countries: [String]) {
     }
     
     print(lotsOfVowels)
-    
-
-    
+   
 }
 //countryWithLotsOfVowels(vowels: vowels)
 
@@ -306,12 +288,9 @@ func countryWithShortestName(countries: [String]) {
 
     for country in countries {
 
-        
        let currentCountryLength = country.count
         
         guard currentCountryLength <= currentSmallest else {continue}
-        
-        
 
         if currentCountryLength == currentSmallest {
             shortestCountries.append(country)
@@ -319,16 +298,6 @@ func countryWithShortestName(countries: [String]) {
             currentSmallest = currentCountryLength
             shortestCountries = [country]
         }
-        
-         
-       
-//        if currentCountryLength < currentSmallest {
-//
-//            currentSmallest   = currentCountryLength
-//            shortestCountries = [country]
-//        }  else if currentSmallest == currentCountryLength {
-//            shortestCountries.append(country)
-//        }
 
     }
    print(shortestCountries)
