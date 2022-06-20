@@ -231,12 +231,10 @@ func countryBeginningAndEndingWithAVowel(countries: [String]) {
    print(countriesWithVowels)
 }
 countryBeginningAndEndingWithAVowel(countries: allCountries)
-//countryBeginningAndEndingWithAVowel(vowels: vowels)
 
 
 
 func countryWithLotsOfVowels(countries: [String]) {
-    // array to hold countries with more vowels than total letters
     var lotsOfVowels: [String] = []
     
     for country in countries {
@@ -258,7 +256,6 @@ func countryWithLotsOfVowels(countries: [String]) {
     print(lotsOfVowels)
    
 }
-//countryWithLotsOfVowels(vowels: vowels)
 
 func sortAndFindShortest(country: [String]) {
     var sortedCountrys = country
