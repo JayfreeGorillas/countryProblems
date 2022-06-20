@@ -222,30 +222,31 @@ let allCountries:[String] = allCountriesString.split(separator: "\n").map { Stri
 
 // an array that has countrys that match
 
-var countriesWithVowels: [String] = []
+
 
 
                                             // input array of countries
                                             // inners of func do vowels
                                             // return countries
 func countryBeginningAndEndingWithAVowel(countries: [String]) {
-   
-    let vowels: [String] = ["a","e","i","o","u"]
+    var countriesWithVowels: [String] = []
+    let vowels: [Character] = ["a","e","i","o","u"]
  
+    
     for country in countries {
 
         let lowerCountry = country.lowercased()
-        let firstChar = String(lowerCountry.first  ?? "-")
-        let lastChar =  String(lowerCountry.last   ?? "-")
+        let firstChar = lowerCountry.first  ?? "-"
+        let lastChar =  lowerCountry.last   ?? "-"
 
         if  vowels.contains(firstChar) && vowels.contains(lastChar)  {
             countriesWithVowels.append(country)
         }
     
     }
-   
+   print(countriesWithVowels)
 }
-//countryBeginningAndEndingWithAVowel(countries: allCountries)
+countryBeginningAndEndingWithAVowel(countries: allCountries)
 //countryBeginningAndEndingWithAVowel(vowels: vowels)
 
 // countries are more vowels than anything else
