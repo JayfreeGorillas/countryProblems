@@ -233,7 +233,6 @@ func countryBeginningAndEndingWithAVowel(countries: [String]) {
 countryBeginningAndEndingWithAVowel(countries: allCountries)
 //countryBeginningAndEndingWithAVowel(vowels: vowels)
 
-// countries are more vowels than anything else
 
 
 func countryWithLotsOfVowels(countries: [String]) {
